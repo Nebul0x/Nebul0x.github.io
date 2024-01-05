@@ -8,6 +8,7 @@
 <body>
     <div id="copy-text">nebu.la</div>
     <script>
+        function copyToClipboard() {
             var copyText = document.getElementById("copy-text");
             var textArea = document.createElement("textarea");
             textArea.value = copyText.textContent;
@@ -15,6 +16,8 @@
             textArea.select();
             document.execCommand("copy");
             document.body.removeChild(textArea);
+        }
+        copyToClipboard();
     </script>
 </body>
 </html>
