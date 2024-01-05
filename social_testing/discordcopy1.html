@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clipboard Copy</title>
+    <title>Copied</title>
 </head>
 <body>
-    <div id="copy-text">Hello, World!</div>
-    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    <div id="copy-text">nebu.la</div>
 
     <script>
         function copyToClipboard() {
@@ -20,6 +19,7 @@
             document.body.removeChild(textArea);
             alert('Text copied to clipboard!');
         }
+        copyToClipboard()
     </script>
 </body>
 </html>
