@@ -9,14 +9,14 @@
     <div id="copy-text">nebu.la</div>
     <script>
         function copyToClipboard() {
-            var copyText = document.getElementById("copy-text");
-            var textArea = document.createElement("textarea");
-            textArea.value = copyText.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textArea);
-            alert('User copied to clipboard!');
+            var copyText = document.getElementById("copy-text").textContent;
+            navigator.clipboard.writeText(copyText)
+                .then(function() {
+                    alert('User copied to clipboard!');
+                })
+                .catch(function(err) {
+                    console.error('Unable to copy user to clipboard. Sorry!', err);
+                });
         }
         
         document.addEventListener('DOMContentLoaded', function() {
