@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copied</title>
+</head>
+<body>
+    <div id="copy-text">ky0uki</div>
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("copy-text").textContent;
+            navigator.clipboard.writeText(copyText)
+                .then(function() {
+                    alert('User copied to clipboard!');
+                })
+                .catch(function(err) {
+                    console.error('Unable to copy user to clipboard. Sorry!', err);
+                });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            copyToClipboard();
+        });
+    </script>
+</body>
+</html>
