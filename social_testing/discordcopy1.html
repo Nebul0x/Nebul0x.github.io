@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copied Text!</title>
+    <title>Copied!</title>
 </head>
 <body>
     <div id="copy-text">nebu.la</div>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            copyToClipboard();
+        });
+
         function copyToClipboard() {
             var copyText = document.getElementById("copy-text");
             var textArea = document.createElement("textarea");
@@ -17,7 +21,6 @@
             document.execCommand("copy");
             document.body.removeChild(textArea);
         }
-        copyToClipboard();
     </script>
 </body>
 </html>
