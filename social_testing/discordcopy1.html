@@ -7,7 +7,6 @@
 </head>
 <body>
     <div id="copy-text">nebu.la</div>
-
     <script>
         function copyToClipboard() {
             var copyText = document.getElementById("copy-text");
@@ -19,7 +18,10 @@
             document.body.removeChild(textArea);
             alert('Text copied to clipboard!');
         }
-        copyToClipboard()
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            copyToClipboard();
+        });
     </script>
 </body>
 </html>
